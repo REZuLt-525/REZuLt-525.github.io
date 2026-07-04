@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wheeled-legged bipedal robot · Zehao Li</title>
+<link rel="icon" href="../assets/avatar.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Zehao Li <span>·</span> Robotics Engineer</a>
+    <nav class="main">
+      <a href="../index.html">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé</a>
+      <a href="../cn/projects/biped.html" class="lang">中文</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← All projects</a></div>
+    <h1>High-dynamic wheeled-legged bipedal robot</h1>
+    <div class="projmeta"><b>Shanghai Innovation Program</b> · 2024 ·
+    Role: mechanical design (linkage synthesis, actuator selection)</div>
+
+    <div class="glance">
+      <div class="glance-label">ROLE &amp; KEY CONTRIBUTIONS</div>
+      <p class="lead">Owner of the mechanical design for a dynamically-balancing biped; teammates built the electronics and LQR control stack.</p>
+      <ol>
+        <li>Synthesized the five-link leg geometry and optimized rod lengths for the target motion envelope;</li>
+        <li>Sized the actuators from dynamic-simulation torque requirements;</li>
+        <li>Designed the chassis structure, enabling roll adjustment, dynamic driving, and stand-up recovery under LQR whole-body control (videos below).</li>
+      </ol>
+    </div>
+
+    <h2>Overview</h2>
+    <p>A two-wheel-leg bipedal robot built to handle complex terrain without giving up speed. The
+    platform uses a three-actuator, five-link leg on each side, with balance and posture managed by an
+    LQR-based whole-body-control framework. With minor modifications, the same architecture serves as a
+    "balance infantry" robot in RoboMaster competition.</p>
+
+    <h2>My role</h2>
+    <p>I owned the mechanical design: synthesis and rod-length optimization of the five-link leg
+    mechanism, actuator torque sizing and motor selection, and the structural design of the chassis.
+    Teammates developed the electronics and the LQR control stack — the mechanical design had to give
+    the controller a plant worth controlling: low leg inertia, clean joint kinematics, and actuators
+    operating in their efficient torque–speed region.</p>
+
+    <h2>Design highlights</h2>
+    <ul>
+      <li>Five-link leg geometry tuned so the wheel contact point tracks a near-vertical line through
+      the suspension travel, keeping the linearized model accurate for the LQR controller.</li>
+      <li>Actuators selected by mapping required joint torques from dynamic simulation onto motor
+      torque–speed curves, rather than by static worst-case sizing alone.</li>
+      <li>The robot demonstrates roll adjustment, dynamic driving, and recovery to standing from a
+      crouch (videos below).</li>
+    </ul>
+
+    <h2>Media</h2>
+    <div class="figrow">
+      <figure>
+        <video controls muted playsinline src="../images/sitp1.mp4"></video>
+        <figcaption>Roll adjustment under disturbance.</figcaption>
+      </figure>
+      <figure>
+        <video controls muted playsinline src="../images/sitp2.mp4"></video>
+        <figcaption>Dynamic driving.</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <video controls muted playsinline src="../images/sitp3.mp4"></video>
+        <figcaption>Standing up from a crouch.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/sitp4.png" alt="CAD design of the wheeled-legged bipedal robot">
+        <figcaption>CAD model of the robot.</figcaption>
+      </figure>
+    </div>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 Zehao Li</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

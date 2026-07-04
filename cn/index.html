@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>李泽昊 · 机器人工程师</title>
+<meta name="description" content="李泽昊的作品集——机器人机械设计、仿真与强化学习。纽约大学机电与机器人工程硕士在读。">
+<link rel="icon" href="../assets/avatar.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="index.html" class="active">项目</a>
+      <a href="about.html">关于</a>
+      <a href="../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../index.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="row">
+      <img class="avatar" src="../assets/avatar.png" alt="李泽昊">
+      <div>
+        <h1>李泽昊</h1>
+        <div class="tagline">机械设计 · 仿真 · 强化学习</div>
+      </div>
+    </div>
+    <p class="intro">我设计并制造机器人——从减速箱、轮组到全身控制的轮腿双足平台。
+    纽约大学机电、机器人与自动化工程硕士在读；曾任同济大学 Superpower RoboMaster
+    战队机械组负责人，带领 20 人设计团队征战三个赛季。工作横跨机械设计、物理仿真
+    （MuJoCo、Simscape）与面向操作任务的强化学习。</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">查看项目</a>
+      <a class="btn ghost" href="about.html">关于我</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+
+    <h2 class="section">研究与独立项目</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/microgravity.html">
+        <div class="thumb"><img src="../images/placeholder-microgravity.png" alt="微重力机器人与双臂平台"></div>
+        <div class="body">
+          <h3>微重力机器人与双臂操作平台</h3>
+          <div class="meta">NYU Riviere Robot Lab · 2025年9月至今</div>
+          <p>主导 ATMOS 开源版本与 RRL M3 双臂操作平台的机械评审与结构重构，并用 MuJoCo
+          仿真完成工作空间分析与设计验证。</p>
+          <div class="tags"><span class="tag">机械设计</span><span class="tag">MuJoCo</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/rl-manipulation.html">
+        <div class="thumb"><img src="../images/placeholder-rl.png" alt="强化学习机械臂操作"></div>
+        <div class="body">
+          <h3>面向操作任务的强化学习</h3>
+          <div class="meta">NYU · 2025 至今 · 持续更新中</div>
+          <p>从零实现 Q-Learning 与 DQN，用于机械臂操作实验（含开抽屉任务），配套 MuJoCo
+          仿真环境。</p>
+          <div class="tags"><span class="tag">强化学习</span><span class="tag">Python</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/biped.html">
+        <div class="thumb"><img src="../images/sitp4.png" alt="轮腿式双足机器人"></div>
+        <div class="body">
+          <h3>轮腿式双足机器人</h3>
+          <div class="meta">上海市大学生创新项目 · 2024</div>
+          <p>基于 LQR 全身控制框架的高动态两轮腿双足平台，五连杆腿部构型。我负责全部机械设计：
+          连杆综合、杆长优化与电机选型。</p>
+          <div class="tags"><span class="tag">机械设计</span><span class="tag">足式机器人</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/synchro-arm.html">
+        <div class="thumb"><img src="../images/uiuc1.png" alt="同步驱动底盘与五自由度机械臂"></div>
+        <div class="body">
+          <h3>同步驱动底盘 + 5 自由度机械臂</h3>
+          <div class="meta">独立项目 · 2024</div>
+          <p>四个同步驱动轮组构成全向底盘，搭载 yaw-pitch-pitch-roll-yaw 五自由度机械臂。
+          机械之外，编码器/配电 PCB、STM32 底盘运动学与 PID 控制、YOLOv7 识别也由我完成。</p>
+          <div class="tags"><span class="tag">机电一体化</span><span class="tag">全栈机器人</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 class="section" style="margin-top: 48px;">工业界经历</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/xiaomi.html">
+        <div class="thumb"><img src="../images/placeholder-xiaomi.png" alt="小米机器人实验室实习"></div>
+        <div class="body">
+          <h3>人形机器人仿真与机构研究</h3>
+          <div class="meta">小米机器人实验室 · 2026年5月至今</div>
+          <p>围绕 Ultron V3.0 人形机器人的仿真与机械研究：基于 GJK 碰撞检测的工作空间分析、
+          MuJoCo/Simscape 全身关节力矩研究，以及基于 RoboGrammar 的构型优化。</p>
+          <div class="tags"><span class="tag">仿真</span><span class="tag">人形机器人</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/wuji.html">
+        <div class="thumb"><img src="../images/cover-wuji.png" alt="上海舞肌科技有限公司实习——人形头部与灵巧手"></div>
+        <div class="body">
+          <h3>人形头部与灵巧手工程化</h3>
+          <div class="meta">上海舞肌科技有限公司 · 2024年8–10月</div>
+          <p>基于人体运动学约束设计 3 自由度颈部稳定机构；外骨骼臂静力学仿真与 CNC
+          结构优化；20+ 自由度灵巧手动态负载耐久测试。</p>
+          <div class="tags"><span class="tag">机械设计</span><span class="tag">测试验证</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/puncture.html">
+        <div class="thumb"><img src="../images/placeholder-puncture.png" alt="磅策医疗机器人实习"></div>
+        <div class="body">
+          <h3>医疗机器人毛囊夹持机构</h3>
+          <div class="meta">上海磅克策医疗科技有限公司 · 2024年4–6月</div>
+          <p>主导植发机器人毛囊夹持机构的重新设计：减少电机依赖、提升空间效率，
+          并设计了经仿真验证、直接投产的弹簧锁止机构。</p>
+          <div class="tags"><span class="tag">医疗机器人</span><span class="tag">面向量产设计</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 class="section" style="margin-top: 48px;">竞赛机器人 — RoboMaster</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/drivetrain.html">
+        <div class="thumb"><img src="../images/gb5.png" alt="同步驱动轮组爆炸视图"></div>
+        <div class="body">
+          <h3>传动系统深潜：轮组与行星减速箱</h3>
+          <div class="meta">同济 Superpower · 2023–2025 · 哨兵与步兵的动力来源</div>
+          <p>四代同步驱动轮组——从 Watt 连杆悬挂到一体化轮毂电机——外加从零设计的 2K-H
+          行星减速箱（10.16:1）。减重 45.5%，底盘小陀螺 1.0 秒/圈 → 0.3 秒/圈。</p>
+          <div class="tags"><span class="tag">减速箱设计</span><span class="tag">迭代工程</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sentry2025.html">
+        <div class="thumb"><img src="../images/sentry2024_1.png" alt="RoboMaster 哨兵机器人 2025 赛季"></div>
+        <div class="body">
+          <h3>RoboMaster 哨兵机器人 · 2025 赛季</h3>
+          <div class="meta">同济 Superpower · 2025 赛季 · 全国赛哨兵兵种一等奖</div>
+          <p>第三代哨兵：在成熟的 2024 架构上系统性推进板件轻量化与整机稳定性提升，
+          再夺全国赛哨兵兵种一等奖。</p>
+          <div class="tags"><span class="tag">轻量化</span><span class="tag">系统稳定性</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sentry.html">
+        <div class="thumb"><img src="../images/sentry2024.jpg" alt="RoboMaster 哨兵机器人"></div>
+        <div class="body">
+          <h3>RoboMaster 哨兵机器人 · 2023–2024</h3>
+          <div class="meta">同济 Superpower · 2023–2024 · 全国赛哨兵兵种一等奖（2023）</div>
+          <p>从零设计的自主哨兵：自研同步驱动底盘 + 激光雷达导航；第二赛季全面迭代——
+          轮组减重、云台质心归轴、五相机环视感知与悬挂调校。</p>
+          <div class="tags"><span class="tag">机械设计</span><span class="tag">系统迭代</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/infantry.html">
+        <div class="thumb"><img src="../images/inf2024.jpg" alt="RoboMaster 步兵机器人"></div>
+        <div class="body">
+          <h3>RoboMaster 步兵机器人 · 2024</h3>
+          <div class="meta">同济 Superpower · 2024 赛季</div>
+          <p>以自研同步驱动传动系统重构 2019 年遗留的麦轮平台。弹仓移至 yaw 轴上，
+          云台转动惯量降低超 40%；底盘 100W 功率限制下小陀螺转速达 0.3 秒/圈。</p>
+          <div class="tags"><span class="tag">机械设计</span><span class="tag">传动系统</span></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 李泽昊</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">邮箱</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../assets/Zehao_Li_Resume.pdf">简历（英文 PDF）</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

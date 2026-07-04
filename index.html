@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zehao Li · Robotics Engineer</title>
+<meta name="description" content="Portfolio of Zehao Li — robotics engineer focused on mechanical design, simulation, and reinforcement learning. M.S. Mechatronics and Robotics at NYU.">
+<link rel="icon" href="assets/avatar.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="index.html">Zehao Li <span>·</span> Robotics Engineer</a>
+    <nav class="main">
+      <a href="index.html" class="active">Projects</a>
+      <a href="about.html">About</a>
+      <a href="assets/Zehao_Li_Resume.pdf">Résumé</a>
+      <a href="cn/index.html" class="lang">中文</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <section class="hero">
+    <div class="row">
+      <img class="avatar" src="assets/avatar.png" alt="Zehao Li">
+      <div>
+        <h1>Zehao Li</h1>
+        <div class="tagline">Mechanical design · Simulation · Reinforcement learning</div>
+      </div>
+    </div>
+    <p class="intro">I design and build robots — from gearboxes and wheel sets to whole-body-controlled bipeds.
+    M.S. student in Mechatronics, Robotics and Automation Engineering at New York University.
+    Formerly mechanical sub-team lead of Tongji University's Superpower RoboMaster team, where I led a
+    20-person team through three competition seasons. My work spans mechanical design, physics simulation
+    (MuJoCo, Simscape), and reinforcement learning for manipulation.</p>
+    <div class="cta">
+      <a class="btn primary" href="#projects">View projects</a>
+      <a class="btn ghost" href="about.html">About me</a>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+
+    <h2 class="section">Research &amp; independent projects</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/microgravity.html">
+        <div class="thumb"><img src="images/placeholder-microgravity.png" alt="Micro-gravity robot and bimanual platform"></div>
+        <div class="body">
+          <h3>Micro-gravity robot &amp; bimanual platform</h3>
+          <div class="meta">NYU Riviere Robot Lab · Sep 2025–present</div>
+          <p>Mechanical review and restructuring for the ATMOS open-source release and the RRL M3
+          bimanipulation platform, with MuJoCo simulation for workspace analysis and design validation.</p>
+          <div class="tags"><span class="tag">Mechanical design</span><span class="tag">MuJoCo</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/rl-manipulation.html">
+        <div class="thumb"><img src="images/placeholder-rl.png" alt="Reinforcement learning for manipulation"></div>
+        <div class="body">
+          <h3>Reinforcement learning for manipulation</h3>
+          <div class="meta">NYU · 2025–present · ongoing, updated as it grows</div>
+          <p>Q-Learning and DQN implemented from scratch for robotic-arm manipulation experiments,
+          including drawer-opening tasks, with MuJoCo simulation environments.</p>
+          <div class="tags"><span class="tag">Reinforcement learning</span><span class="tag">Python</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/biped.html">
+        <div class="thumb"><img src="images/sitp4.png" alt="Wheeled-legged bipedal robot"></div>
+        <div class="body">
+          <h3>Wheeled-legged bipedal robot</h3>
+          <div class="meta">Shanghai Innovation Program · 2024</div>
+          <p>A high-dynamic, two-wheel-leg biped on a five-link chassis under an LQR whole-body-control
+          framework. I owned the mechanical design: linkage synthesis, rod-length optimization, and
+          actuator selection.</p>
+          <div class="tags"><span class="tag">Mechanical design</span><span class="tag">Legged robots</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/synchro-arm.html">
+        <div class="thumb"><img src="images/uiuc1.png" alt="Synchro-drive robot with a 5-DoF arm"></div>
+        <div class="body">
+          <h3>Synchro-drive robot with a 5-DoF arm</h3>
+          <div class="meta">Independent project · 2024</div>
+          <p>An omnidirectional robot integrating four synchro-drive wheel sets with a
+          yaw-pitch-pitch-roll-yaw arm. Beyond the mechanics, I built the encoder/distribution PCB,
+          STM32 chassis kinematics and PID control, and YOLOv7-based recognition.</p>
+          <div class="tags"><span class="tag">Mechatronics</span><span class="tag">Full-stack robotics</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 class="section" style="margin-top: 48px;">Industry experience</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/xiaomi.html">
+        <div class="thumb"><img src="images/placeholder-xiaomi.png" alt="Xiaomi Robotics Lab internship"></div>
+        <div class="body">
+          <h3>Humanoid simulation &amp; mechanism research</h3>
+          <div class="meta">Xiaomi Robotics Lab · May 2026–present</div>
+          <p>Simulation and mechanical research on the Ultron V3.0 humanoid: workspace analysis with GJK
+          collision detection, full-body joint-torque studies in MuJoCo and Simscape, and
+          graph-grammar-based morphology optimization built on RoboGrammar.</p>
+          <div class="tags"><span class="tag">Simulation</span><span class="tag">Humanoids</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/wuji.html">
+        <div class="thumb"><img src="images/cover-wuji.png" alt="Wuji Tech internship — humanoid head and dexterous hand"></div>
+        <div class="body">
+          <h3>Humanoid head &amp; dexterous hand engineering</h3>
+          <div class="meta">Wuji Tech · Aug–Oct 2024</div>
+          <p>A 3-DoF neck stabilizer designed from humanoid kinematic constraints, statics simulation and
+          CNC structural optimization for a full-DoF exoskeleton arm, and endurance testing of a 20+ DoF
+          dexterous robotic hand.</p>
+          <div class="tags"><span class="tag">Mechanical design</span><span class="tag">Testing</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/puncture.html">
+        <div class="thumb"><img src="images/placeholder-puncture.png" alt="Puncture Robotics internship"></div>
+        <div class="body">
+          <h3>Follicle-holding mechanism for a medical robot</h3>
+          <div class="meta">Puncture Robotics · Apr–Jun 2024</div>
+          <p>Led the mechanical redesign of a hair-transplantation robot's follicle-holding mechanism:
+          fewer motors, better space efficiency, and a production-ready spring-based locking mechanism
+          validated in simulation and adopted directly into product.</p>
+          <div class="tags"><span class="tag">Medical robotics</span><span class="tag">Design for production</span></div>
+        </div>
+      </a>
+
+    </div>
+
+    <h2 class="section" style="margin-top: 48px;">Competition robotics — RoboMaster</h2>
+    <div class="grid">
+
+      <a class="card" href="projects/drivetrain.html">
+        <div class="thumb"><img src="images/gb5.png" alt="Exploded view of the synchro-drive wheel set"></div>
+        <div class="body">
+          <h3>Drivetrain deep dive: wheel sets &amp; planetary gearbox</h3>
+          <div class="meta">Tongji Superpower · 2023–2025 · powers the sentry and infantry</div>
+          <p>Four generations of synchro-drive wheel sets — Watt-linkage suspension to an integrated
+          hub motor — plus a from-scratch 2K-H planetary gearbox (10.16:1). 45.5% weight cut; chassis
+          spin time 1.0 s → 0.3 s per revolution.</p>
+          <div class="tags"><span class="tag">Gearbox design</span><span class="tag">Iterative engineering</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sentry2025.html">
+        <div class="thumb"><img src="images/sentry2024_1.png" alt="RoboMaster sentry robot, 2025 season"></div>
+        <div class="body">
+          <h3>RoboMaster sentry robot, 2025 season</h3>
+          <div class="meta">Tongji Superpower · 2025 season · National first prize, sentry category</div>
+          <p>The third-generation sentry: systematic panel lightweighting and whole-machine stability
+          improvements on the proven 2024 architecture, carrying the sentry category to a second
+          national first prize.</p>
+          <div class="tags"><span class="tag">Lightweighting</span><span class="tag">System stability</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/sentry.html">
+        <div class="thumb"><img src="images/sentry2024.jpg" alt="RoboMaster sentry robot"></div>
+        <div class="body">
+          <h3>RoboMaster sentry robot, 2023–2024</h3>
+          <div class="meta">Tongji Superpower · 2023–2024 · National first prize, sentry category (2023)</div>
+          <p>Clean-sheet design of an autonomous sentry with a custom synchro-drive chassis and LiDAR
+          navigation, then a full second-season iteration: lighter wheel sets, recentered gimbal mass,
+          five-camera surround perception, and tuned suspension.</p>
+          <div class="tags"><span class="tag">Mechanical design</span><span class="tag">System iteration</span></div>
+        </div>
+      </a>
+
+      <a class="card" href="projects/infantry.html">
+        <div class="thumb"><img src="images/inf2024.jpg" alt="RoboMaster infantry robot"></div>
+        <div class="body">
+          <h3>RoboMaster infantry robot, 2024</h3>
+          <div class="meta">Tongji Superpower · 2024 season</div>
+          <p>Redesign of a legacy Mecanum-wheel platform around the team's synchro-drive drivetrain.
+          Relocating the magazine onto the yaw axis cut gimbal moment of inertia by over 40%; the robot
+          spins at 0.3 s/rev under a 100 W chassis power limit.</p>
+          <div class="tags"><span class="tag">Mechanical design</span><span class="tag">Drivetrain</span></div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 Zehao Li</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="assets/Zehao_Li_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

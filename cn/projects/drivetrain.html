@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>传动系统深潜 · 李泽昊</title>
+<link rel="icon" href="../../assets/avatar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="../index.html">项目</a>
+      <a href="../about.html">关于</a>
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../../projects/drivetrain.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← 全部项目</a></div>
+    <h1>传动系统深潜：四代同步驱动轮组与自研行星减速箱</h1>
+    <div class="projmeta"><b>同济 Superpower 战队</b> · 2023–2025 ·
+    角色：全部版本的唯一设计者 · 应用于<a href="sentry.html">哨兵</a>与
+    <a href="infantry.html">步兵</a>机器人</div>
+
+    <div class="glance">
+      <div class="glance-label">角色与核心贡献</div>
+      <p class="lead">两个赛季内独立设计一整套全向底盘传动系统——四代轮组与一台从零设计的行星减速箱，
+      现为战队哨兵与步兵机器人提供动力。</p>
+      <ol>
+        <li>设计 Watt 连杆悬挂轮组（v1），仿真 60 mm 连杆达 42.7 mm 垂向行程、横向偏差 &lt;±0.1 mm，
+        采用低成本 FR4 玻纤连杆兼顾刚度；</li>
+        <li>实战轴系失效后重构可靠性（v2），删除 Watt 连杆并加装两根铜柱增刚，实现沥青、玛蹄脂与瓷砖地面稳定运行；</li>
+        <li>推进集成化与减重（v3），将轮圈、侧板与固定套合并为单体 CNC 件、轴承组由 3 减至 1，
+        整体减重 45.5%（2.2 kg → 1.261 kg）；</li>
+        <li>打造准轮毂电机（v4），将 1:7 环齿级嵌入 GM6020 空心电机并配自研磁编码器 PCB，彻底取消联轴器；</li>
+        <li>按实测力矩反推设计从零自研 2K-H 行星减速箱（10.16:1），将底盘小陀螺由 1.0 秒/圈降至 0.3 秒/圈。</li>
+      </ol>
+    </div>
+
+    <h2>为什么要做</h2>
+    <p>麦克纳姆轮浪费功率也浪费重量。两个赛季里，我设计、弄坏、再重新设计出一整套全向传动
+    系统——四个大版本的轮组和一台从零设计的行星减速箱——如今驱动着战队的哨兵与步兵机器人。</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">45.5%</div><div class="lbl">单套轮组减重（2.2 kg → 1.261 kg）</div></div>
+      <div class="stat"><div class="num">10.16:1</div><div class="lbl">自研行星减速箱传动比</div></div>
+      <div class="stat"><div class="num">1.0 → 0.3 秒</div><div class="lbl">底盘小陀螺每圈用时</div></div>
+    </div>
+
+    <h2>v1 — Watt 连杆悬挂</h2>
+    <p>第一版把悬挂布置在轮组驱动部分，通过 Watt 连杆让转向部分与底盘框架刚性连接，
+    同时降低簧下质量。60 mm 连杆的仿真结果：轮心垂直行程 42.7 mm 时横向偏差小于 ±0.1 mm——
+    既给弹簧留足压缩行程，又不牺牲轮组定位。连杆材料选 FR4 玻纤板：刚度够用，成本远低于碳板。</p>
+
+    <h2>v2 — 可靠性重构</h2>
+    <p>实测中 v1 的轴系反复损坏——插接轴壶在压力测试下失效，悬臂梁式的驱动部分在大冲击下
+    有分离风险。v2 取消 Watt 连杆，加入两根铜柱增强刚度。130 mm × 20 mm 车轮包胶 7.5 mm、
+    硬度 90A，在沥青、胶质与瓷砖地面都能稳定行驶。</p>
+
+    <h2>2023 赛季后的复盘</h2>
+    <ol>
+      <li>单套轮组约 2.2 kg，把整机推到 25 kg，加速度比对手低约 15%。</li>
+      <li>M3508 P19 电机力矩过剩但限制了极速——减速比与工况不匹配。</li>
+      <li>电机总长 98.4 mm，导致转向回转半径达 71 mm，比轮子半径大出 12.5 mm。</li>
+      <li>市面上没有同时满足体积、重量与力矩需求的轮毂电机——只能自己造一个。</li>
+    </ol>
+
+    <h2>v3 — 集成化与减重</h2>
+    <p>2023 年夏天的再设计聚焦零件集成：胀套替代 D 形联轴器，金属直角转接件增强驱动部分刚度，
+    轴承从三组减到两组、最终一组——同时放宽了 CNC 件的加工精度要求、降低成本。轮辋、侧板与
+    胀套固定件合并为单个 CNC 零件。包胶减薄至 5 mm、硬度改为 60A 以保证抓地力。
+    结果：单套 1.261 kg，减重 45.5%。</p>
+
+    <h2>v4 — 事实上的轮毂电机</h2>
+    <p>最终版把 1:7 齿圈级集成进 GM6020 中空电机，彻底取消联轴器，内部空间留给滑环和自研
+    磁编码器 PCB。双板编码器组件用橡胶减振垫圈安装、五处对位连接，保证工作载荷下两板不分离、
+    不振荡。</p>
+
+    <h2>行星减速箱</h2>
+    <p>从约 20 kg 机器人的轮毂电机实测力矩（约需 1.5 N·m）反推，设计了 119 齿齿圈的 2K-H
+    行星级，最终传动比 10.16:1。最初考虑摆线减速器（同空间减速比更大），但标准件限制了设计，
+    权衡后改为结构更简单的行星方案。单侧轮毂兼作轴承外挡边，整个减速级成为车轮的一部分。
+    全部零件采用 6061-T6——预算约束下的激进选择——齿厚 4 mm，起动力矩校核留有冗余
+    （M3508 起动力矩 4.4 N·m，折算到驱动端 0.232 N·m）。</p>
+    <p><b>结果：</b>相近工况下，底盘小陀螺用时从 1.0 秒/圈降至 0.3 秒/圈（对比麦轮基线）。</p>
+
+    <h2>图片与视频</h2>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/gbv1.png" alt="第一版轮组（Watt 连杆）">
+        <figcaption>v1 — Watt 连杆悬挂。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/gbv2.png" alt="第二版轮组（可靠性重构）">
+        <figcaption>v2 — 可靠性重构。</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/gbv3.png" alt="第三版轮组（集成化设计）">
+        <figcaption>v3 — 集成化与减重。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/gbv4.jpg" alt="第四版轮组（轮毂电机）">
+        <figcaption>v4 — 一体化轮毂电机。</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/gb5.png" alt="v4 轮组爆炸视图">
+        <figcaption>v4 爆炸视图。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/gb6.png" alt="v4 轮组转向部分设计">
+        <figcaption>v4 转向部分。</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/gearbox.jpg" alt="行星减速箱尼龙手板">
+        <figcaption>行星减速箱 — 尼龙手板。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/gearbox_2.png" alt="行星减速箱装配爆炸视图">
+        <figcaption>行星减速箱 — 爆炸视图。</figcaption>
+      </figure>
+    </div>
+    <figure>
+      <video controls muted playsinline src="../../images/in

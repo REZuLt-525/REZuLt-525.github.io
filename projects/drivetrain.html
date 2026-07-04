@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Drivetrain deep dive · Zehao Li</title>
+<link rel="icon" href="../assets/avatar.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Zehao Li <span>·</span> Robotics Engineer</a>
+    <nav class="main">
+      <a href="../index.html">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé</a>
+      <a href="../cn/projects/drivetrain.html" class="lang">中文</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← All projects</a></div>
+    <h1>Drivetrain deep dive: four wheel-set generations and a custom planetary gearbox</h1>
+    <div class="projmeta"><b>Tongji Superpower team</b> · 2023–2025 ·
+    Role: designer of all versions · Used on the <a href="sentry.html">sentry</a> and
+    <a href="infantry.html">infantry</a> robots</div>
+
+    <div class="glance">
+      <div class="glance-label">ROLE &amp; KEY CONTRIBUTIONS</div>
+      <p class="lead">Sole designer of a complete omnidirectional drivetrain across two seasons — four
+      wheel-set generations and a from-scratch planetary gearbox — now powering the team's sentry and
+      infantry robots.</p>
+      <ol>
+        <li>Designed the Watt-linkage suspended wheel set (v1); simulated 60 mm links to 42.7 mm of
+        vertical travel at &lt;±0.1 mm lateral deviation, using low-cost FR4 fiberglass links;</li>
+        <li>Rebuilt the wheel set for robustness (v2) after field axle failures — removed the Watt
+        linkage, added copper stiffening columns — for reliable running on asphalt, mastic, and tile;</li>
+        <li>Integrated and lightweighted the design (v3), merging rim, side-plate and sleeve into single
+        CNC parts and cutting bearing sets 3→1, for a 45.5% mass reduction (2.2 kg → 1.261 kg);</li>
+        <li>Built an effective hub motor (v4) by embedding a 1:7 ring-gear stage into a GM6020 hollow
+        motor with a custom magnetic-encoder PCB, eliminating the coupling entirely;</li>
+        <li>Designed a from-scratch 2K-H planetary gearbox (10.16:1) sized from measured torque data,
+        cutting chassis spin time from 1.0 s to 0.3 s per revolution.</li>
+      </ol>
+    </div>
+
+    <h2>Why it exists</h2>
+    <p>Mecanum wheels waste power and weight. Across two seasons I designed, broke, and redesigned a
+    complete omnidirectional drivetrain — four major wheel-set versions and a from-scratch planetary
+    gearbox — that now propels the team's sentry and infantry robots.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">45.5%</div><div class="lbl">weight cut per wheel set (2.2 kg → 1.261 kg)</div></div>
+      <div class="stat"><div class="num">10.16:1</div><div class="lbl">custom planetary gearbox ratio</div></div>
+      <div class="stat"><div class="num">1.0 → 0.3 s</div><div class="lbl">chassis spin time per revolution</div></div>
+    </div>
+
+    <h2>v1 — Watt-linkage suspension</h2>
+    <p>The first version put the suspension on the driving section of the wheel set through a Watt
+    linkage, tying the steering section rigidly to the chassis frame and reducing unsprung mass.
+    Simulation of the 60 mm links showed 42.7 mm of vertical wheel travel with lateral deviation under
+    ±0.1 mm — enough spring stroke without sacrificing wheel positioning. Links were cut from FR4
+    fiberglass: far cheaper than carbon fiber at adequate stiffness.</p>
+
+    <h2>v2 — Robustness rebuild</h2>
+    <p>Field testing broke v1's axle shafting repeatedly — the plug-in axle pots failed under pressure,
+    and the cantilevered driving section threatened to separate under high impact. v2 deleted the Watt
+    linkage and added two copper columns for stiffness. The 130 mm × 20 mm wheels with 7.5 mm of 90A
+    over-molding ran reliably on asphalt, mastic, and tile floors.</p>
+
+    <h2>Post-2023 analysis</h2>
+    <ol>
+      <li>At ~2.2 kg per set, the wheels pushed the robot to 25 kg and cost roughly 15% acceleration
+      versus rival designs.</li>
+      <li>The M3508 P19 motor had torque to spare but capped top speed — the gear ratio was wrong for
+      the duty cycle.</li>
+      <li>The motor's 98.4 mm length forced a 71 mm rotational radius on the steering axis, 12.5 mm
+      more than the wheel radius itself.</li>
+      <li>No commercial hub motor met the volume, weight, and torque requirements simultaneously —
+      so I had to build one.</li>
+    </ol>
+
+    <h2>v3 — Integration and weight cut</h2>
+    <p>The summer 2023 redesign focused on part integration: expansion sleeves replaced D-shaped
+    couplings, metal right-angle adapters stiffened the driving section, and bearing sets went from
+    three to two, then one — relaxing CNC accuracy requirements and cutting cost. The rim, side plate,
+    and sleeve-fixing parts merged into single CNC pieces. Over-molding thinned to 5 mm at 60A hardness
+    to keep traction. Result: 1.261 kg per set, a 45.5% reduction.</p>
+
+    <h2>v4 — A hub motor, effectively</h2>
+    <p>The final version integrated a 1:7 ring-gear stage into a GM6020 hollow motor, eliminating the
+    coupling entirely and leaving interior space for the slip ring and a custom magnetic-encoder PCB.
+    The two-board encoder stack mounts on rubber shock-isolation gaskets with five alignment joints, so
+    the boards cannot separate and oscillate under load.</p>
+
+    <h2>The planetary gearbox</h2>
+    <p>Working backwards from measured hub-motor torque on a ~20 kg robot (~1.5 N·m required), I sized
+    a 2K-H planetary stage with a 119-tooth ring and a final ratio of 10.16:1. A cycloid reducer was
+    considered first for its compactness but rejected — standard parts constrained the design. The
+    single-sided hub doubles as the outer bearing retainer, making the entire reduction stage part of
+    the wheel. All parts are 6061-T6 — an aggressive material choice driven by budget — with 4 mm gear
+    thickness and verified starting-torque redundancy (4.4 N·m at the M3508, 0.232 N·m at the driving
+    section).</p>
+    <p><b>Outcome:</b> under comparable conditions, chassis spin time dropped from 1.0 s to 0.3 s per
+    revolution versus the Mecanum baseline.</p>
+
+    <h2>Media</h2>
+    <div class="figrow">
+      <figure>
+        <img src="../images/gbv1.png" alt="Wheel set version 1 with Watt linkage">
+        <figcaption>v1 — Watt-linkage suspension.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/gbv2.png" alt="Wheel set version 2, robustness rebuild">
+        <figcaption>v2 — robustness rebuild.</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../images/gbv3.png" alt="Wheel set version 3, integrated design">
+        <figcaption>v3 — integration and weight cut.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/gbv4.jpg" alt="Wheel set version 4, hub-motor design">
+        <figcaption>v4 — integrated hub-motor design.</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../images/gb5.png" alt="Exploded view of the v4 wheel set">
+        <figcaption>v4 exploded view.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/gb6.png" alt="Steering section design of the v4 wheel set">
+        <figcaption>v4 steering section.</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <img src="../images/gearbox.jpg" alt="Nylon prototype of the planetary gearbox">
+        <figcaption>Planetary gearbox — nylon prototype.</figcaption>
+      </figure>
+      <figure>
+        <img src="../images/gearbox_2.png" alt="Exploded view of the planetary gearbox assembly">
+        <figcaption>Planetary gearbox — exploded view.</figcaption>
+      </figure>
+    </div>
+    <figure>
+      <video controls muted playsinline src="../images/inf2024_3.mp4"></video>
+      <figcaption>The 0.3 s/rev spin measurement — infantry robot under a 100 W chassis power limit.</figcaption>
+    </figure>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 Zehao Li</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reinforcement learning for manipulation · Zehao Li</title>
+<link rel="icon" href="../assets/avatar.png">
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Zehao Li <span>·</span> Robotics Engineer</a>
+    <nav class="main">
+      <a href="../index.html">Projects</a>
+      <a href="../about.html">About</a>
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé</a>
+      <a href="../cn/projects/rl-manipulation.html" class="lang">中文</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← All projects</a></div>
+    <h1>Reinforcement learning for robotic manipulation</h1>
+    <div class="projmeta"><b>New York University</b> · 2025 – present ·
+    Role: implementation and experiments</div>
+
+    <div class="glance">
+      <div class="glance-label">ROLE &amp; KEY CONTRIBUTIONS</div>
+      <p class="lead">Solo, ongoing reinforcement-learning work on manipulation — core value-based algorithms implemented from scratch, with the environments to train them.</p>
+      <ol>
+        <li>Implemented Q-Learning and DQN from scratch, including replay buffer, target network, exploration schedules, and reward shaping;</li>
+        <li>Built MuJoCo environments for a drawer-opening manipulation task;</li>
+        <li>Stood up a working end-to-end RL pipeline, updated as the research grows.</li>
+      </ol>
+    </div>
+
+    <h2>Overview</h2>
+    <p>To understand RL algorithms at the implementation level — not just as library calls — I built
+    Q-Learning and Deep Q-Networks (DQN) from scratch in Python and applied them to robotic-arm
+    manipulation experiments, including drawer-opening tasks.</p>
+
+    <h2>What's inside</h2>
+    <ul>
+      <li>Tabular Q-Learning and DQN implemented from first principles: replay buffer, target network,
+      epsilon-greedy exploration schedules, and reward shaping for sparse manipulation rewards.</li>
+      <li>MuJoCo simulation environments for the manipulation tasks, connecting my mechanical-design
+      background to the learning pipeline: the same workspace analysis used for hardware validation
+      defines the RL task space.</li>
+      <li>Drawer-opening as the benchmark task — a contact-rich problem where naive reward design
+      fails and the agent must sequence reaching, grasping, and pulling.</li>
+    </ul>
+
+    <h2>Why it matters for my work</h2>
+    <p>Mechanical designers who understand learning-based control design different hardware: actuation
+    that is torque-transparent, mechanisms whose state is observable, structures that survive the
+    exploration phase. This project is my bridge between the two worlds.</p>
+
+    <figure>
+      <img src="../images/placeholder-rl.png" alt="RL manipulation experiments — image coming soon">
+      <figcaption>Experiment renders coming soon.</figcaption>
+    </figure>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 Zehao Li</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">Email</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../assets/Zehao_Li_Resume.pdf">Résumé (PDF)</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

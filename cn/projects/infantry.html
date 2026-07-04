@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboMaster 步兵机器人 · 李泽昊</title>
+<link rel="icon" href="../../assets/avatar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="../index.html">项目</a>
+      <a href="../about.html">关于</a>
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../../projects/infantry.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← 全部项目</a></div>
+    <h1>RoboMaster 步兵机器人 · 2024 赛季</h1>
+    <div class="projmeta"><b>同济 Superpower 战队</b> · 2024 赛季 ·
+    角色：步兵机械设计师</div>
+
+    <div class="glance">
+      <div class="glance-label">角色与核心贡献</div>
+      <p class="lead">步兵机械设计师（与哨兵组负责人职务并行），以自研同步驱动系统重构遗留平台。</p>
+      <ol>
+        <li>用同步驱动传动系统替换遗留麦轮平台，底盘减重约 45%；</li>
+        <li>将弹仓移至云台 yaw 旋转轴上，云台转动惯量降低超 40%；</li>
+        <li>在 100W 功率限制下实现底盘小陀螺 0.3 秒/圈。</li>
+      </ol>
+    </div>
+
+    <h2>为什么重新设计</h2>
+    <p>战队的步兵机器人继承自 2019 赛季：麦克纳姆轮平台存在无法回避的轮组功率损耗、
+    底盘超重，且与 2023 哨兵一样，弹仓偏置把云台重心拖离了旋转轴。</p>
+
+    <h2>改了什么</h2>
+    <ul>
+      <li>把我为哨兵开发的同步驱动轮组与自研减速箱适配进步兵的设计包络，解决底盘超重问题
+      （见<a href="drivetrain.html">传动系统深潜</a>）。</li>
+      <li>弹仓移至云台 yaw 旋转轴上，云台转动惯量降低超过 40%。</li>
+    </ul>
+
+    <div class="stats">
+      <div class="stat"><div class="num">&gt;40%</div><div class="lbl">云台转动惯量降低</div></div>
+      <div class="stat"><div class="num">0.3 秒</div><div class="lbl">每圈，100W 功率限制下小陀螺</div></div>
+      <div class="stat"><div class="num">45%</div><div class="lbl">底盘减重（对比遗留平台）</div></div>
+    </div>
+
+    <h2>图片与视频</h2>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/inf2024.jpg" alt="2024 步兵机器人实物">
+        <figcaption>2024 步兵 — 实物。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/inf2024_2.png" alt="2024 步兵机器人 CAD 模型">
+        <figcaption>2024 步兵 — CAD 模型。</figcaption>
+      </figure>
+    </div>
+    <figure>
+      <video controls muted playsinline src="../../images/inf2024_3.mp4"></video>
+      <figcaption>底盘 100W 功率限制下以 0.3 秒/圈小陀螺。</figcaption>
+    </figure>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 李泽昊</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">邮箱</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历（英文 PDF）</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

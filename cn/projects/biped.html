@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>轮腿式双足机器人 · 李泽昊</title>
+<link rel="icon" href="../../assets/avatar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="../index.html">项目</a>
+      <a href="../about.html">关于</a>
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../../projects/biped.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← 全部项目</a></div>
+    <h1>高动态轮腿式双足机器人</h1>
+    <div class="projmeta"><b>上海市大学生创新项目</b> · 2024 ·
+    角色：机械设计（连杆综合、电机选型）</div>
+
+    <div class="glance">
+      <div class="glance-label">角色与核心贡献</div>
+      <p class="lead">动态平衡双足机器人的机械设计负责人；电控与 LQR 控制栈由队友完成。</p>
+      <ol>
+        <li>综合五连杆腿部几何并优化杆长，匹配目标运动范围；</li>
+        <li>依据动力学仿真的力矩需求完成执行器选型；</li>
+        <li>设计底盘结构，支撑 LQR 全身控制下的横滚调整、动态行驶与起立恢复。</li>
+      </ol>
+    </div>
+
+    <h2>概述</h2>
+    <p>一台为"复杂地形不减速"而生的两轮腿双足机器人。每侧为三执行器五连杆腿，
+    平衡与姿态由基于 LQR 的全身控制框架管理。稍作修改后，同一架构可作为 RoboMaster
+    中的"平衡步兵"参赛。</p>
+
+    <h2>我的角色</h2>
+    <p>我负责全部机械设计：五连杆腿部机构的综合与杆长优化、执行器力矩核算与电机选型、
+    底盘结构设计。队友开发电控与 LQR 控制栈——机械设计的任务是给控制器一个"值得控制"的对象：
+    低腿部惯量、干净的关节运动学、工作在高效力矩-转速区间的执行器。</p>
+
+    <h2>设计要点</h2>
+    <ul>
+      <li>五连杆几何经调校，使悬挂行程内轮接触点近似沿垂线运动，保证 LQR 控制器
+      线性化模型的精度。</li>
+      <li>执行器选型基于动力学仿真的关节力矩需求映射到电机力矩-转速曲线，而非仅按静态
+      最坏工况估算。</li>
+      <li>机器人可演示横滚调整、动态行驶与从下蹲起立恢复（视频如下）。</li>
+    </ul>
+
+    <h2>图片与视频</h2>
+    <div class="figrow">
+      <figure>
+        <video controls muted playsinline src="../../images/sitp1.mp4"></video>
+        <figcaption>扰动下的横滚调整。</figcaption>
+      </figure>
+      <figure>
+        <video controls muted playsinline src="../../images/sitp2.mp4"></video>
+        <figcaption>动态行驶。</figcaption>
+      </figure>
+    </div>
+    <div class="figrow">
+      <figure>
+        <video controls muted playsinline src="../../images/sitp3.mp4"></video>
+        <figcaption>从下蹲起立。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/sitp4.png" alt="轮腿式双足机器人 CAD 设计">
+        <figcaption>机器人 CAD 模型。</figcaption>
+      </figure>
+    </div>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 李泽昊</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">邮箱</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历（英文 PDF）</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

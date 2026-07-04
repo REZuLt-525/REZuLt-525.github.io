@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RoboMaster 哨兵机器人 2023–2024 · 李泽昊</title>
+<link rel="icon" href="../../assets/avatar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="../index.html">项目</a>
+      <a href="../about.html">关于</a>
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../../projects/sentry.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← 全部项目</a></div>
+    <h1>RoboMaster 哨兵机器人：从零设计到全国一等奖</h1>
+    <div class="projmeta"><b>同济 Superpower 战队</b> · 2023–2024 赛季 ·
+    角色：哨兵组队员（2023）、哨兵机械组负责人（2024） ·
+    <b>全国赛哨兵兵种一等奖（2023）</b></div>
+
+    <div class="glance">
+      <div class="glance-label">角色与核心贡献</div>
+      <p class="lead">从哨兵组队员（2023）成长为哨兵机械组负责人（2024），完成横跨两个赛季的夺冠设计。</p>
+      <ol>
+        <li>从零设计同步驱动底盘与轮组；</li>
+        <li>云台质心归轴消除小陀螺漂移，实现解耦旋转稳定不漂移；</li>
+        <li>主导第二赛季轻量化（轮组减重 45.5%）与五相机环视感知布局，助力全国赛哨兵兵种一等奖（2023）。</li>
+      </ol>
+    </div>
+
+    <h2>背景</h2>
+    <p>在 RoboMaster 高校联盟赛中，哨兵是全队唯一的全自主机器人：无人操控，需要自主导航、
+    感知并交战。2023 赛季初规则大改，旧哨兵设计整体作废，只能从零重新设计。</p>
+
+    <h2>2023 赛季 — 从 0 到 1</h2>
+    <p>麦克纳姆轮的摩擦功耗显著，因此底盘采用自研同步驱动轮系
+    （详见<a href="drivetrain.html">传动系统深潜</a>）。规则包络内并列布置双发射机构，
+    云台 yaw 轴中心布置 Livox MID-360 全向激光雷达用于建图与导航。该机器人的赛场表现
+    为战队拿下全国赛哨兵兵种一等奖。</p>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/sentry2023.png" alt="2023 哨兵 CAD 总览">
+        <figcaption>2023 哨兵 — CAD 总览。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/sentry2023_image.jpg" alt="2023 哨兵实物">
+        <figcaption>2023 哨兵 — 实物。</figcaption>
+      </figure>
+    </div>
+
+    <h2>赛后复盘</h2>
+    <p>比赛暴露了 v1 机器人的三个问题：</p>
+    <ol>
+      <li><b>超重。</b>整机顶到 28.5 kg 的级别上限，玻纤板需换碳纤维。</li>
+      <li><b>云台质量偏轴。</b>弹仓偏置于云台一侧导致重心侧移——底盘小陀螺、云台解耦时
+      整机向后漂移。</li>
+      <li><b>精度与联调。</b>发射精度以及机械-电控联调需要系统性打磨。</li>
+    </ol>
+
+    <h2>2024 赛季 — 迭代</h2>
+    <ul>
+      <li>发射舱归位至 yaw 轴中心，降低云台转动惯量，根除小陀螺漂移。</li>
+      <li>两版新轮组直击底盘最重的子系统——单套轮组减重 45.5%；结构板件逐一静力学分析继续减重。</li>
+      <li>重新设计 yaw 轴系，简化赛间换轴承流程。</li>
+      <li>新增全向感知：yaw 轴上布置五相机环视系统。</li>
+      <li>NUC 计算单元重新布局兼作配重，云台配平的同时降低整机重心；悬挂系统按工况调校。</li>
+    </ul>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/sentry2024_2.png" alt="2024 哨兵（v4）CAD 模型">
+        <figcaption>2024 哨兵（v4）— CAD 模型。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/sentry2024.jpg" alt="2024 哨兵实物">
+        <figcaption>2024 哨兵 — 实物。</figcaption>
+      </figure>
+    </div>
+
+    <div class="callout">故事在 <a href="sentry2025.html">2025 赛季</a>继续——板件轻量化与
+    整机稳定性提升，再夺兵种一等奖。支撑这些迭代的自研轮组与减速箱另有专页：
+    <a href="drivetrain.html">传动系统深潜</a>。</div>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 李泽昊</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">邮箱</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历（英文 PDF）</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

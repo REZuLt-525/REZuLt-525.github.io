@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>同步驱动底盘 + 5 自由度机械臂 · 李泽昊</title>
+<link rel="icon" href="../../assets/avatar.png">
+<link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="../index.html">李泽昊 <span>·</span> 机器人工程师</a>
+    <nav class="main">
+      <a href="../index.html">项目</a>
+      <a href="../about.html">关于</a>
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历</a>
+      <a href="../../projects/synchro-arm.html" class="lang">EN</a>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <article class="project">
+    <div class="crumb"><a href="../index.html">← 全部项目</a></div>
+    <h1>同步驱动底盘 + 5 自由度机械臂机器人</h1>
+    <div class="projmeta"><b>独立项目</b> · 2024 ·
+    角色：全栈——机械、PCB、控制、视觉</div>
+
+    <div class="glance">
+      <div class="glance-label">角色与核心贡献</div>
+      <p class="lead">独立全栈打造全向移动操作平台，覆盖机械、电控、控制与感知四个方向。</p>
+      <ol>
+        <li>完成同步驱动底盘与 5 自由度机械臂的机械设计，从 CAD 到硬件；</li>
+        <li>设计双板编码器/配电 PCB；</li>
+        <li>实现 STM32 底盘运动学与 PID 控制，以及机械臂正逆运动学；</li>
+        <li>集成 YOLOv7 识别，打通从感知到运动的闭环。</li>
+      </ol>
+    </div>
+
+    <h2>概述</h2>
+    <p>一台横跨四个学科的移动操作机器人：机械设计、PCB 设计、控制与视觉识别。
+    底盘由四个同步驱动轮组实现全向移动，同步带驱动云台第一 yaw 轴；机械臂为
+    yaw-pitch-pitch-roll-yaw 五自由度构型，以应对更复杂的作业条件。</p>
+
+    <h2>机械</h2>
+    <p>机器人将我为竞赛机器人开发的同步驱动轮组与减速箱设计
+    （详见<a href="drivetrain.html">传动系统深潜</a>）集成进紧凑底盘，云台上搭载五自由度串联臂。</p>
+
+    <h2>电子</h2>
+    <p>我设计了双板 PCB 组件，兼作轮组转向轴的磁编码器与配电板。上板把底盘总线电压降压给
+    M3508 驱动与转向电机，并转发位置数据与 CAN 报文；下板搭载编码器芯片与四个霍尔元件，
+    读取随轮组驱动部分旋转的磁环，输出转向角信息。</p>
+
+    <h2>控制与视觉</h2>
+    <ul>
+      <li>推导全向底盘运动学模型，用 STM32CubeMX 在 RoboMaster C 板（STM32F407IGHx）上
+      搭建控制框架，含 CAN 通信与 PID 控制环。</li>
+      <li>实现五自由度机械臂位置的正、逆运动学求解。</li>
+      <li>部署 YOLOv7 实现目标识别。</li>
+    </ul>
+
+    <h2>图片</h2>
+    <figure>
+      <img src="../../images/uiuc1.png" alt="同步驱动 + 五自由度机械臂机器人 CAD 总览">
+      <figcaption>机器人设计总览。</figcaption>
+    </figure>
+    <div class="figrow">
+      <figure>
+        <img src="../../images/uiuc2.png" alt="编码器与配电板 PCB 设计">
+        <figcaption>编码器/配电 PCB 设计。</figcaption>
+      </figure>
+      <figure>
+        <img src="../../images/uiuc3.png" alt="PCB 打样实物">
+        <figcaption>PCB 打样实物。</figcaption>
+      </figure>
+    </div>
+  </article>
+</div>
+
+<footer class="site">
+  <div class="wrap">
+    <div>© 2025–2026 李泽昊</div>
+    <div>
+      <a href="mailto:lizao50323@gmail.com">邮箱</a> ·
+      <a href="https://www.linkedin.com/in/zehao-li0323">LinkedIn</a> ·
+      <a href="../../assets/Zehao_Li_Resume.pdf">简历（英文 PDF）</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
